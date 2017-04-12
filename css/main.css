@@ -1,0 +1,1017 @@
+/*reset*/
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul,a {margin:0;padding:0}
+body,button,input,select,textarea { font:12px/1.5 tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif}
+h1,h2,h3,h4,h5,h6 {font-size:100%}
+address,cite,dfn,em,var {font-style:normal}
+code,kbd,pre,samp {font-family:courier new,courier,monospace}
+small {font-size:12px}
+ol,ul,li {list-style:none}
+a {text-decoration:none}
+a,button{cursor: pointer;}
+a:hover {text-decoration:none}
+sup {vertical-align:text-top}
+sub {vertical-align:text-bottom}
+legend {color:#000}
+fieldset,img {border:0}
+button,input,select,textarea {font-size:100%}
+table {border-collapse:collapse;border-spacing:0}
+.none{display:none;}
+/* For modern browsers */
+.clearfix:before, .clearfix:after {
+  content:""; display:table;
+}
+
+.clearfix:after { clear:both; }
+
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chrome、firefox */
+    url('iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#uxiconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*reset*/
+
+body{
+  background: none;
+  color: #333;
+}
+
+/*网页头部*/
+#headerBg{
+  width: 100%;
+  background: url(../images/headerbg.png) repeat-x;
+  margin: 0 0 50px 0;
+}
+#header{
+  width: 900px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+/*网页头部图标*/
+#header .logo{
+  width: 100px;
+  height: 30px;
+  float: left;
+}
+#header .logo img{
+  display: block;
+}
+
+/*网页头部个人中心*/
+#header .member{
+  width: 70px;
+  height: 30px;
+  float: right;
+  line-height: 30px;
+  background: url(../images/arrow.png) no-repeat 55px center;
+  cursor: pointer;
+  position: relative;
+}
+/*网页头部个人中心的展式菜单*/
+#header ul{
+  position: absolute;
+  top: 30px;
+  left: -20px;
+  background: #FBF7E1;
+  width: 100px;
+  height: 0px;
+  border: 1px solid #999;
+  border-top: none;
+  padding: 10px 0 0 0;
+  display: none;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  overflow: hidden;   /*隐藏li*/
+}
+#header ul li{
+  height: 25px;
+  line-height: 25px;
+  text-indent: 20px;
+  letter-spacing: 1px;
+}
+#header ul li a{
+  display: block;
+  color: #333;
+  background: url(../images/arrow3.gif) no-repeat 5px 48%;
+}
+#header ul li a:hover{
+  background: #fc0 url(../images/arrow4.gif) no-repeat 5px 48%;
+}
+
+/*锁屏遮罩画布*/
+#screen{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 9998;
+  filter: alpha(opacity=0);  /*IE*/
+  opacity: 0;  /*非IE*/
+  display: none;
+}
+
+/*网页头部登录和注册*/
+#header .login, #header .reg, #header .info{
+  float: right;
+  width: 35px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+#header .info{
+  width: auto;
+}
+
+/*网页头部登录弹窗*/
+#login{
+  width: 350px;
+  height: 250px;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 9999;
+  background: #fff;
+}
+/*网页头部登录弹窗标题*/
+#login h2{
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #666;
+  background: url(../images/loginheader.png) repeat-x;
+  border-bottom: 1px solid #ccc;
+  cursor: move;
+}
+#login h2 img{
+  float: right;
+  position: relative;
+  top: 14px;
+  right: 8px;
+  cursor: pointer;
+}
+/*网页头部登录弹窗输入用户名和密码*/
+#login div.info{
+  padding: 15px 0 5px 0;
+  text-align: center;
+  color: maroon;
+}
+#login div.user, #login div.pass{
+  font-size: 14px;
+  color: #666;
+  padding: 5px 0;
+  text-align: center;
+}
+#login input.text{
+  width: 200px;
+  height: 25px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+}
+/*网页头部登录弹窗登录按钮*/
+#login .button{
+  text-align: center;
+  padding: 15px 0;
+}
+#login input.submit{
+  width: 107px;
+  height: 30px;
+  background: url(../images/loginbutton.png) no-repeat;
+  border: none;
+  cursor: pointer;
+}
+/*网页头部登录弹窗其他信息*/
+#login .other{
+  text-align: right;
+  padding: 15px 10px;
+  color: #666;
+}
+
+/*网页头部注册弹窗*/
+#reg{
+  width: 600px;
+  height: 550px;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 9999;
+  background: #fff;
+}
+/*网页头部注册弹窗标题*/
+#reg h2{
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #666;
+  background: url(../images/loginheader.png) repeat-x;
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 20px 0;
+  cursor: move;
+}
+#reg h2 img{
+  float: right;
+  position: relative;
+  top: 14px;
+  right: 8px;
+  cursor: pointer;
+}
+/*网页头部注册弹窗需要输入的内容*/
+#reg dl{
+  font-size: 14px;
+  color: #666;
+  margin: 20px;
+  padding: 0 0 0 10px;
+  position: relative;
+}
+#reg dl dd{
+  height: 30px;
+  padding: 5px 0;
+}
+#reg dl dd input.text, #reg dl dd select{
+  width: 200px;
+  height: 25px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  color: #666;
+}
+#reg dl dd select{
+  width: 203px;
+}
+#reg dl dd.birthday select{
+  width: 70px;
+}
+#reg dl dd textarea{
+  width: 360px;
+  height: 100px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+#reg dl dd.ps{
+  padding: 0 0 0 300px;
+}
+#reg dl dd.ps strong.num{
+  padding: 0 2px;
+}
+#reg dl dd.ps span.clear{
+  color: #06f;
+  cursor: pointer;
+}
+/*网页头部注册弹窗注册提交按钮*/
+#reg dl dd input.submit{
+  width: 143px;
+  height: 33px;
+  background: url(../images/reg.png) no-repeat left;
+  border: none;
+  cursor: pointer;
+}
+/*网页头部注册弹窗输入合法性验证后，显示的提示信息*/
+#reg dl dd span.info, #reg dl dd span.error, #reg dl dd span.succ{
+  display: block;
+  color: #333;
+  font-size: 12px;
+  width: 165px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 0 0 35px;
+  position: absolute;
+  letter-spacing: 1px;
+  display: none;
+}
+#reg dl dd span.info{
+  background: url(../images/reginfo.png) no-repeat;
+}
+#reg dl dd span.error{
+  background: url(../images/regerror.png) no-repeat;
+}
+#reg dl dd span.succ{
+  height: 14px;
+  line-height: 14px;
+  background: url(../images/regsucc.png) no-repeat;
+  padding: 0 0 0 20px;
+  color: green;
+}
+/*注册弹窗的用户名验证*/
+#reg dl dd span.loading{
+  position: absolute;
+  top: 10px;
+  left: 300px;
+  font-size: 12px;
+  background: url(../images/loading2.gif) no-repeat;
+  text-indent: 22px;
+}
+#reg dl dd span.infoUser{
+  height: 43px;
+  line-height: 18px;
+  padding-top: 7px;
+  top: 3px;
+  left: 295px;
+  background: url(../images/reginfo2.png) no-repeat;
+}
+#reg dl dd span.errorUser{
+  top: 3px;
+  left: 295px;
+}
+#reg dl dd span.succUser{
+  top: 12px;
+  left: 295px;
+}
+/*注册弹窗的密码验证*/
+#reg dl dd span.infoPass{
+  width: 244px;
+  height: 102px;
+  padding: 4px 0 0 16px;
+  letter-spacing: 0;
+  background: url(../images/reginfo3.png) no-repeat;
+  top: 5px;
+  left: 295px;
+}
+#reg dl dd span.infoPass p{
+  height: 25px;
+  line-height: 25px;
+  color: #666;
+}
+#reg dl dd span.infoPass p strong.s{
+  color: #ccc;
+}
+#reg dl dd span.errorPass{
+  top: 43px;
+  left: 295px;
+}
+#reg dl dd span.succPass{
+  top: 52px;
+  left: 295px;
+}
+/*注册弹窗的密码确认验证*/
+#reg dl dd span.infoNotpass{
+  top: 83px;
+  left: 295px;
+}
+#reg dl dd span.errorNotpass{
+  top: 83px;
+  left: 295px;
+}
+#reg dl dd span.succNotpass{
+  top: 92px;
+  left: 295px;
+}
+/*注册弹窗的提问验证*/
+#reg dl dd span.errorQues{
+  top: 123px;
+  left: 295px;
+}
+/*注册弹窗的问题回答验证*/
+#reg dl dd span.infoAns{
+  top: 163px;
+  left: 295px;
+}
+#reg dl dd span.errorAns{
+  top: 163px;
+  left: 295px;
+}
+#reg dl dd span.succAns{
+  top: 172px;
+  left: 295px;
+}
+/*注册弹窗的电子邮件验证*/
+#reg dl dd span.infoEmail{
+  top: 203px;
+  left: 295px;
+}
+#reg dl dd span.errorEmail{
+  top: 203px;
+  left: 295px;
+}
+#reg dl dd span.succEmail{
+  top: 212px;
+  left: 295px;
+}
+/*电子邮件补全系统可选的域名列表菜单*/
+#reg dl dd ul.allEmail{
+  width: 180px;
+  height: 130px;
+  background: #fff;
+  position: absolute;
+  top: 233px;
+  left: 80px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+}
+#reg dl dd ul.allEmail li{
+  height: 25px;
+  line-height: 25px;
+  border-bottom: 1px solid #e5edf2;
+  padding: 0 5px;
+  cursor: pointer;
+}
+/*年月日错误提示信息*/
+#reg dl dd span.errorBirth{
+  top: 241px;
+  left: 350px;
+}
+
+/*百度分享侧栏*/
+#share{
+  width: 210px;
+  height: 315px;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 0;
+  left: -211px;
+  background: #fff;
+}
+/*百度分享侧栏标题*/
+#share h2{
+  height: 30px;
+  line-height: 30px;
+  background: #eee;
+  font-size: 14px;
+  color: #666;
+  text-indent: 10px;
+}
+/*百度分享侧栏分享链接菜单*/
+#share ul{
+  height: 254px;
+  padding: 3px 0 2px 5px;
+}
+#share ul li{
+  width: 96px;
+  height: 28px;
+  padding: 2px;
+  float: left;
+}
+#share ul li a{
+  display: block;
+  width: 95px;
+  height: 26px;
+  line-height: 26px;
+  color: #666;
+  text-indent: 30px;
+  background-image: url(../images/sharebg.png);
+  background-repeat: no-repeat;
+}
+#share ul li a.a{
+  background-position: 5px 4px;
+}
+#share ul li a.b{
+  background-position: 5px -26px;
+}
+#share ul li a.c{
+  background-position: 5px -56px;
+}
+#share ul li a.d{
+  background-position: 5px -86px;
+}
+#share ul li a.e{
+  background-position: 5px -116px;
+}
+#share ul li a.f{
+  background-position: 5px -146px;
+}
+#share ul li a.g{
+  background-position: 5px -176px;
+}
+#share ul li a.h{
+  background-position: 5px -206px;
+}
+#share ul li a.i{
+  background-position: 5px -236px;
+}
+#share ul li a.j{
+  background-position: 5px -266px;
+}
+#share ul li a.k{
+  background-position: 5px -296px;
+}
+#share ul li a.l{
+  background-position: 5px -326px;
+}
+#share ul li a.m{
+  background-position: 5px -356px;
+}
+#share ul li a.n{
+  background-position: 5px -386px;
+}
+#share ul li a.o{
+  background-position: 5px -416px;
+}
+#share ul li a.p{
+  background-position: 5px -446px;
+}
+#share ul li a:hover{
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  background-color: #eee;
+  color: #06f;
+}
+/*百度分享侧栏底部*/
+#share .shareFooter{
+  height: 26px;
+  background: #eee;
+  position: relative;
+}
+#share .shareFooter a{
+  position: absolute;
+  top: 4px;
+  left: 140px;
+  padding: 0 0 0 13px;
+  background: #eee url(../images/sharebg.png) no-repeat 0 -474px;
+  color: #666;
+}
+#share .shareFooter a:hover{
+  color: #06f;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+/*百度分享侧栏显示在页面上的分享提示*/
+#share .shareFooter span{
+  display: block;
+  width: 24px;
+  height: 88px;
+  position: absolute;
+  top: -230px;
+  left: 210px;
+  background: url(../images/share.png) no-repeat;
+  cursor: pointer;
+}
+
+/*网页导航部分*/
+#nav{
+  width: 465px;
+  height: 52px;
+  background: url(../images/navbg.png) no-repeat;
+  margin: 0 auto;
+  position: relative;
+}
+/*网页导航部分标题列表*/
+#nav ul{
+  position: absolute;
+}
+#nav ul li{
+  width: 85px;
+  height: 52px;
+  line-height: 52px;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+}
+/*网页导航部分标题列表，滑动块效果*/
+#nav ul.black{
+  left: 20px;
+  color: #333;
+  z-index: 1;
+}
+#nav ul.white{
+  width: 425px;
+  color: #fff;
+  z-index: 3;
+  left: 0px;
+}
+#nav ul.about{
+  z-index: 4;
+  left: 20px;
+  cursor: pointer;
+  background: white;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+#nav .navBg{
+  width: 85px;
+  height: 52px;
+  background: url(../images/navover.png) no-repeat 0 11px;
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/*网页主体部分*/
+#main{
+  width: 900px;
+  margin: 50px auto;
+}
+/*网页主体部分侧栏信息框*/
+#sidebar{
+  width: 250px;
+  height: 500px;
+  float: left;
+}
+/*网页主体部分侧栏信息框标题*/
+#sidebar h2{
+  width: 248px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  background: url(../images/sideh.png);
+  text-indent: 10px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+/*网页主体部分侧栏信息框最新信息列表*/
+#sidebar ul{
+  height: 150px;
+  border: 1px solid #ccc;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  opacity: 1;
+  filter: alpha(opacity=100);   /*IE浏览器，需要对透明度进行操作的话，就算全部显示，也要在css设置透明度*/
+  background: #fff;
+}
+#sidebar ul li{
+  height: 30px;
+  line-height: 30px;
+  background: url(../images/arrow4.gif) no-repeat 12px center;
+  text-indent: 30px;
+}
+#sidebar ul li a{
+  color: #333;
+}
+
+/*网页主体部分右侧主要内容栏*/
+#index{
+  width: 630px;
+  height: 570px;
+  float: right;
+  position: relative;
+}
+#index span.loading{
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  top: 260px;
+  left: 260px;
+  background: url(../images/loading4.gif) no-repeat left;
+  display: none;
+}
+#index div.content{
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+#index div.content h2{
+  width: 628px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  background: url(../images/sideh.png);
+  text-indent: 10px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+#index div.content p{
+  height: 130px;
+  border: 1px solid #ccc;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  padding: 10px;
+  text-indent: 24px;
+  line-height: 150%;
+  background: #fff;
+}
+#index div.content h2 em{
+  float: right;
+  font-style: normal;
+  font-weight: normal;
+  padding: 0 10px 0 0;
+}
+/*横幅轮播器*/
+#banner{
+  width: 900px;
+  height: 150px;
+  float: left;
+  margin: 10px 0;
+  position: relative;
+  overflow: hidden;
+}
+#banner img{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+#banner ul{
+  position: absolute;
+  top: 128px;
+  left: 420px;
+  z-index: 4;
+}
+#banner ul li{
+  float: left;
+  padding: 0 5px;
+  font-size: 16px;
+  color: #999;
+  cursor: pointer;
+}
+#banner span{
+  position: absolute;
+  top: 125px;
+  left: 0;
+  width: 900px;
+  height: 25px;
+  background: #333;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  z-index: 3;
+}
+#banner strong{
+  position: absolute;
+  top: 130px;
+  left: 10px;
+  color: #fff;
+  z-index: 4;
+}
+
+/*延迟加载图片*/
+#photo{
+  width: 900px;
+  float: left;
+  background: #fff;
+  padding: 10px 0 0 0;
+}
+#photo dl{
+  width: 225px;
+  height: 270px;
+  float: left;
+  margin: 5px 0 15px 0;
+}
+#photo dl dt{
+  width: 200px;
+  height: 250px;
+  margin: 0 auto;
+}
+#photo dl dt img{
+  display: block;
+  cursor: pointer;
+}
+#photo dl dd{
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+}
+/*图片预加载弹窗*/
+#photoBig{
+  width: 620px;
+  height: 511px;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 9999;
+  background: #fff;
+}
+#photoBig h2{
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #666;
+  background: url(../images/loginheader.png) repeat-x;
+  border-bottom: 1px solid #ccc;
+  margin: 0;
+  cursor: move;
+}
+/*图片预加载弹窗加载大图片*/
+#photoBig h2 img{
+  float: right;
+  position: relative;
+  top: 14px;
+  right: 8px;
+  cursor: pointer;
+}
+#photoBig .big{
+  width: 620px;
+  height: 460px;
+  padding: 10px 0 0 0;
+  background: #333;
+}
+#photoBig .big img{
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 190px;
+}
+#photoBig .big strong{
+  display: block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: #000;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  font-size: 60px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+}
+#photoBig .big strong.sl{
+  top: 210px;
+  left: 20px;
+}
+#photoBig .big strong.sr{
+  top: 210px;
+  right: 20px;
+}
+#photoBig .big span{
+  display: block;
+  width: 300px;
+  height: 450px;
+  background: #000;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  cursor: pointer;
+}
+#photoBig .big span.left{
+  top: 50px;
+  left: 10px;
+}
+#photoBig .big span.right{
+  top: 50px;
+  right: 10px;
+}
+#photoBig .big em{
+  position: absolute;
+  top: 480px;
+  right: 20px;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+}
+
+/*注册等待时显示loading*/
+#loading{
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  background: url(../images/loginheader.png);
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  z-index: 10000;
+}
+#loading p{
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #666;
+  font-weight: bold;
+  background: url(../images/loading3.gif) no-repeat 20px center;
+  text-indent: 50px;
+}
+#success{
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  background: url(../images/loginheader.png);
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  z-index: 10000;
+}
+#success p{
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #666;
+  font-weight: bold;
+  background: url(../images/success.gif) no-repeat 20px center;
+  text-indent: 50px;
+}
+
+/*发表博文*/
+#blog{
+  width: 580px;
+  height: 320px;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 9999;
+  background: #fff;
+}
+/*网页头部注册弹窗标题*/
+#blog h2{
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #666;
+  background: url(../images/loginheader.png) repeat-x;
+  border-bottom: 1px solid #ccc;
+  cursor: move;
+}
+#blog h2 img{
+  float: right;
+  position: relative;
+  top: 14px;
+  right: 8px;
+  cursor: pointer;
+}
+#blog div.info{
+  padding: 15px 0 5px 0;
+  text-align: center;
+  color: maroon;
+}
+#blog dl{
+  padding: 0 0 0 10px;
+}
+#blog dl dd{
+  padding: 10px;
+  font-size: 14px;
+}
+#blog dl dd input.title{
+  width: 200px;
+  height: 25px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-size: 14px;
+  color: #666;
+}
+#blog dl dd textarea.content{
+  width: 360px;
+  height: 100px;
+  max-width: 360px;
+  max-height: 100px;
+  background: #fff;
+  border: 1px solid #ccc;
+  color: #666;
+}
+#blog dl dd input.submit{
+  width: 107px;
+  height: 33px;
+  border: none;
+  background: url(../images/blogbutton.png) no-repeat left;
+  cursor: pointer;
+}
+
+/*更换皮肤*/
+#skin{
+  width: 650px;
+  height: 360px;
+  border: 1px solid #ccc;
+  position: absolute;
+  z-index: 9999;
+  background: #fff;
+}
+#skin h2{
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #666;
+  background: url(../images/loginheader.png) repeat-x;
+  border-bottom: 1px solid #ccc;
+  cursor: move;
+}
+#skin h2 img{
+  float: right;
+  position: relative;
+  top: 14px;
+  right: 8px;
+  cursor: pointer;
+}
+#skin .skinBg{
+  position: relative;
+}
+#skin .skinBg span.loading{
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  top: 140px;
+  left: 270px;
+  background: url(../images/loading4.gif) no-repeat left;
+}
+#skin dl{
+  float: left;
+  padding: 12px 0 0 12px;
+}
+#skin dl dt{
+  display: block;
+  cursor: pointer;
+}
+#skin dl dd{
+  text-align: center;
+  padding: 2px 0 0 0;
+  letter-spacing: 1px;
+}
+
+/*网页页脚*/
+#footer{
+  width: 900px;
+  float: left;
+  text-align: center;
+  padding: 5px;
+}
+#footer p{
+  padding: 5px;
+}
